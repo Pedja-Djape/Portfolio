@@ -4,94 +4,18 @@ import html from "../assets/html.png"
 import css from "../assets/css.png"
 import javascript from "../assets/javascript.png"
 import reactImage from "../assets/react.png"
-import github from "../assets/github.png"
-import tailwind from "../assets/tailwind.png"
 import python from "../assets/python.png"
 import flask from '../assets/Flask_logo.png'
 import gitlab from '../assets/gitlab.png'
 import gcp from '../assets/google_cloud-icon.svg'
 import terraform from '../assets/terraform.svg'
-import pytorch from '../assets/pytorch-logo.png'
 import git from "../assets/Git-Icon-White.png"
 import java from '../assets/Java-Logo.png'
 import k8s from '../assets/k8s.png'
+import express from "../assets/expressjs-icon.svg"
+import node from "../assets/node.png"
 
 const Skills = () => {
-    const techs = [
-        {
-            id: 1,
-            src: python,
-            title: "Python",
-            style: "shadow-blue-400"
-        },
-        {
-            id: 2,
-            src: flask,
-            title: "Flask",
-            style: "shadow-white",
-        },
-        {
-            id: 3,
-            src: javascript,
-            title: "JavaScript",
-            style: "shadow-yellow-500",
-        },
-        {
-            id: 4,
-            src: reactImage,
-            title: "React",
-            style: "shadow-blue-600",
-        },
-        {
-        id: 9,
-        src: html,
-        title: "HTML",
-        style: "shadow-orange-500",
-        },
-        {
-            id: 8,
-            src: gitlab,
-            title: "GitLab CI/CD",
-            style: "shadow-orange-400",
-        },
-        {
-            id: 11,
-            src: gcp,
-            title: "Google Cloud Platform (GCP)",
-            style: "shadow-[#2cd158]"
-        },
-        {
-            id: 12,
-            src: terraform,
-            title: "Terraform",
-            style: "shadow-[#844FBA]"
-        },
-        {
-            id: 13,
-            src: pytorch,
-            title: "PyTorch",
-            style: "shadow-orange-500"
-        },
-        {
-        id: 10,
-        src: css,
-        title: "CSS",
-        style: "shadow-blue-500",
-        },
-        {
-        id: 5,
-        src: tailwind,
-        title: "Tailwind",
-        style: "shadow-sky-400",
-        },
-        {
-            id: 14,
-            src: git,
-            title: "Git",
-            style: "shadow-white"
-        }
-    ];
-
     const skills = {
         "Programming Languages": [
             {
@@ -136,8 +60,20 @@ const Skills = () => {
             {
                 id: 7,
                 src: reactImage,
-                title: "React",
+                title: "React.js",
                 style: "shadow-blue-600",
+            },
+            {
+                id: 8,
+                src: express,
+                title: "Express.js",
+                style: "shadow-white"
+            },
+            {
+                id: 9,
+                src: node,
+                title: "Node.js",
+                style: 'shadow-[#22f022]'
             }
         ],
         "Deployment & Version Control": [
@@ -165,6 +101,12 @@ const Skills = () => {
                 title: "Terraform",
                 style: "shadow-[#844FBA]"
             },
+            {
+                id: 13,
+                src: git,
+                title: "Git",
+                style: "shadow-white"
+            }
         ]
     }
 
