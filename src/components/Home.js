@@ -13,10 +13,11 @@ const Home = () => {
         <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
             <div className='flex flex-col justify-center h-full'>
                 <h2 className="text-4xl sm:text-6xl font-bold text-white">
-                    I'm a Software Engineer.
+                    Hi, I'm Pedja | Software Engineer
                 </h2>
                 <p className='text-gray-500 py-4 max-w-md'>
-                    Short Summary.
+                    I love building solutions that solve complex problems 🏗 Embrace growth 🌱 
+                    And I'm your go-to guy for random facts ⚛️
                 </p>
 
                 <div>
