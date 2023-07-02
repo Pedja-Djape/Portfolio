@@ -72,27 +72,25 @@ const Portfolio = () => {
                 <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
                     {portfolios.map(({ id, src }) => (
                         <div
-                        key={id}
-                        className={`shadow-md shadow-gray-600 rounded-lg duration-800 hover:scale-105  ${
-                            hoveredElement !== id ? "filter blur-[3px]" : ""
-                        }`}
-                        onMouseEnter={() => setHoveredElement(id)}
-                        onMouseLeave={() => setHoveredElement(null)}
-                        onClick={() => setModalOpen(true)}
+                            key={id}
+                            className='shadow-md shadow-gray-600 rounded-lg hover:scale-105 duration-300'
+                            onMouseEnter={() => setHoveredElement(id)}
+                            onMouseLeave={() => setHoveredElement(null)}
+                            onClick={() => setModalOpen(true)}
                         >
-                        <img
-                            src={src}
-                            alt=""
-                            className="rounded-md"
-                        />
-                        <div className="flex items-center justify-center">
-                            <button className="w-1/2 px-6 py-3 m-4 ">
-                            Demo
-                            </button>
-                            <button className="w-1/2 px-6 py-3 m-4 ">
-                            Code
-                            </button>
-                        </div>
+                            <img
+                                src={src}
+                                alt=""
+                                className="rounded-md"
+                            />
+                            <div className="flex items-center justify-center">
+                                <button className="w-1/2 px-6 py-3 m-4 ">
+                                    Demo
+                                </button>
+                                <button className="w-1/2 px-6 py-3 m-4 ">
+                                    Code
+                                </button>
+                            </div>
                         </div>
                     ))}
                 </div>
