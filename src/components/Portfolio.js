@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import medapp from "../assets/portfolio/medapp.png";
+import PortfolioCard from "./PortfolioCard";
 
 function Modal({ isOpen, onClose, children }) {
     if (!isOpen) return null;
@@ -22,8 +23,6 @@ function Modal({ isOpen, onClose, children }) {
   }
 
 const Portfolio = () => {
-
-    const [hoveredElement, setHoveredElement] = useState(null)
     const [modalOpen, setModalOpen] = useState(false)
 
     const portfolios = [
@@ -46,27 +45,7 @@ const Portfolio = () => {
             
                 <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
                     {portfolios.map(({ id, visual }) => (
-                        <div
-                            key={id}
-                            className='shadow-md shadow-gray-600 rounded-lg hover:scale-105 duration-300'
-                            onMouseEnter={() => setHoveredElement(id)}
-                            onMouseLeave={() => setHoveredElement(null)}
-                        >
-                            <img
-                                src={visual}
-                                alt=""
-                                className="rounded-md"
-                                onClick={() => setModalOpen(true)}
-                            />
-                            <div className="flex items-center justify-center">
-                                <button className="w-1/2 px-6 py-3 m-4 ">
-                                    Check it out!
-                                </button>
-                                <button className="w-1/2 px-6 py-3 m-4 ">
-                                    <a href="https://github.com/Pedja-Djape/MyMedJournal" target="_blank" rel="noreferrer">Code</a>
-                                </button>
-                            </div>
-                        </div>
+                        <PortfolioCard id={id} visual={visual}/>
                     ))}
                 </div>
                 <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)}>
