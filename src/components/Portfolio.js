@@ -1,11 +1,6 @@
 import React, { useState } from "react";
 
-import arrayDestruct from "../assets/portfolio/arrayDestruct.jpg";
-import installNode from "../assets/portfolio/installNode.jpg";
-import navbar from "../assets/portfolio/navbar.jpg";
-import reactParallax from "../assets/portfolio/reactParallax.jpg";
-import reactSmooth from "../assets/portfolio/reactSmooth.jpg";
-import reactWeather from "../assets/portfolio/reactWeather.jpg";
+import medapp from "../assets/portfolio/medapp.png";
 
 function Modal({ isOpen, onClose, children }) {
     if (!isOpen) return null;
@@ -33,29 +28,9 @@ const Portfolio = () => {
 
     const portfolios = [
         {
-        id: 1,
-        src: arrayDestruct,
-        },
-        {
-        id: 2,
-        src: reactParallax,
-        },
-        {
-        id: 3,
-        src: navbar,
-        },
-        {
-        id: 4,
-        src: reactSmooth,
-        },
-        {
-        id: 5,
-        src: installNode,
-        },
-        {
-        id: 6,
-        src: reactWeather,
-        },
+            id: 1,
+            visual: medapp,
+        }
     ];
 
     return (
@@ -70,25 +45,25 @@ const Portfolio = () => {
                 </div>
             
                 <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
-                    {portfolios.map(({ id, src }) => (
+                    {portfolios.map(({ id, visual }) => (
                         <div
                             key={id}
                             className='shadow-md shadow-gray-600 rounded-lg hover:scale-105 duration-300'
                             onMouseEnter={() => setHoveredElement(id)}
                             onMouseLeave={() => setHoveredElement(null)}
-                            onClick={() => setModalOpen(true)}
                         >
                             <img
-                                src={src}
+                                src={visual}
                                 alt=""
                                 className="rounded-md"
+                                onClick={() => setModalOpen(true)}
                             />
                             <div className="flex items-center justify-center">
                                 <button className="w-1/2 px-6 py-3 m-4 ">
-                                    Demo
+                                    Check it out!
                                 </button>
                                 <button className="w-1/2 px-6 py-3 m-4 ">
-                                    Code
+                                    <a href="https://github.com/Pedja-Djape/MyMedJournal" target="_blank" rel="noreferrer">Code</a>
                                 </button>
                             </div>
                         </div>
