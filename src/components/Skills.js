@@ -112,16 +112,16 @@ const Skills = () => {
 
         return (
             <div
-                name="experience"
+                name="Skills"
                 className="bg-gradient-to-b from-gray-800 to-black w-full "
             >
                 <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white">
                     <div>
                     <p className="text-4xl font-bold border-b-4 border-gray-500 pt-30 inline">
-                        Experience
+                        Skills
                     </p>
                     <p className="py-6">
-                        These are the technologies I've worked with during full-time roles, internships/co-op, personal projects, and university coursework. </p>
+                        These are the technologies I've worked with during full-time roles, internships/co-op, and personal projects. </p>
                     </div>
                     
                     {Object.keys(skills).map((skillType) => (
