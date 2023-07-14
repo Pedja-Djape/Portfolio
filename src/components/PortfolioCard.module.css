@@ -7,11 +7,11 @@
 
 }
 
-.links:before {
+/* .links:before {
     content: "";
     border: 1px solid #d3d3d3;
     align-self: stretch;
-}
+} */
 
 .cardButton__start {
     order: -1 
