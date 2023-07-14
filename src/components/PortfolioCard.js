@@ -1,5 +1,5 @@
 import React from 'react'
-
+import classes from './PortfolioCard.module.css';
 const PortfolioCard = (props) => {
   return (
     <>
@@ -12,14 +12,20 @@ const PortfolioCard = (props) => {
                 alt=""
                 className="rounded-md"
             />
-            <div className="flex items-center justify-center">
-                <button className="w-1/2 px-6 py-3 m-4 ">
-                    Check it out!
-                </button>
-                <button className="w-1/2 px-6 py-3 m-4 ">
-                    <a href="https://github.com/Pedja-Djape/MyMedJournal" target="_blank" rel="noreferrer">Code</a>
-                </button>
-            </div>
+            <section className={classes.links}>
+                <div className={`${classes.cardButton} ${classes.cardButton__start}`}>
+                    <a href={props.buttons[0].src} target='_blank' rel='noreferrer'>{props.buttons[0].text}</a>
+                </div>
+                {
+                    props.buttons.length === 1 ? null : (
+                        <div className={`${classes.cardButton} ${classes.cardButton__end}`}>
+                            <a href={props.buttons[1].src} target='_blank' rel='noreferrer'>{props.buttons[1].text}</a>
+                        </div>
+                    )
+                }
+                
+                
+            </section>
         </div>
     </>
   )
