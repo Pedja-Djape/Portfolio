@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import medapp from "../assets/portfolio/medapp.png";
+import lcl from "../assets/portfolio/LCL.svg.png"
 import PortfolioCard from "./PortfolioCard";
 
 function Modal({ isOpen, onClose, children }) {
@@ -37,6 +38,16 @@ const Portfolio = () => {
                 {
                     text: "Code",
                     src: "https://github.com/Pedja-Djape/MyMedJournal"
+                }
+            ],
+        },
+        {
+            id: 2,
+            visual: lcl,
+            buttons:  [
+                {
+                    text: "Visit company site.",
+                    src: "https://www.loblaw.ca/"
                 }
             ]
         }
