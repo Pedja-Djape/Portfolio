@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 
 import medapp from "../assets/portfolio/medapp.png";
-import lcl from "../assets/portfolio/LCL.svg.png"
+import lcl from "../assets/portfolio/LCL.svg.png";
+import ds419 from "../assets/portfolio/ds419.png";
+
+
 import PortfolioCard from "./PortfolioCard";
 
 function Modal({ isOpen, onClose, children }) {
@@ -50,6 +53,20 @@ const Portfolio = () => {
                     src: "https://www.loblaw.ca/"
                 }
             ]
+        },
+        {
+            id: 3,
+            visual: ds419,
+            buttons: [
+                {
+                    text: "Demo.",
+                    src: ".",
+                },
+                {
+                    text: "Code.",
+                    src: "https://github.com/Pedja-Djape/Cloud-Database-ECE419/"
+                }
+            ]
         }
     ];
 
@@ -64,7 +81,7 @@ const Portfolio = () => {
                 <p className="py-6">Check out some of my work right here</p>
                 </div>
             
-                <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
+                <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0 border-2 border-sky-500">
                     {portfolios.map(({ id, visual, buttons }) => (
                         <PortfolioCard id={id} visual={visual} buttons={buttons}/>
                     ))}
