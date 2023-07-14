@@ -29,6 +29,16 @@ const Portfolio = () => {
         {
             id: 1,
             visual: medapp,
+            buttons: [
+                {
+                    text: "Visit the site!",
+                    src: "https://medappfrontend.web.app/"
+                },
+                {
+                    text: "Code",
+                    src: "https://github.com/Pedja-Djape/MyMedJournal"
+                }
+            ]
         }
     ];
 
@@ -44,8 +54,8 @@ const Portfolio = () => {
                 </div>
             
                 <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
-                    {portfolios.map(({ id, visual }) => (
-                        <PortfolioCard id={id} visual={visual}/>
+                    {portfolios.map(({ id, visual, buttons }) => (
+                        <PortfolioCard id={id} visual={visual} buttons={buttons}/>
                     ))}
                 </div>
                 <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)}>
